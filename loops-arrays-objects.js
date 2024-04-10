@@ -16,9 +16,16 @@ const scores = [
 // 66
 // ==========================================
 
+const scores = [
+    {name: 'Max', score: 83, grade: null},
+    {name: 'David', score: 77, grade: null},
+    {name: 'Khalid', score: 92, grade: null},
+    {name: 'Rianne', score: 66, grade: null}
+];
 
-
-
+for (let i = 0; i < scores.length; i++) {
+    console.log(scores[i].score);
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +39,31 @@ const scores = [
 // D
 // ==========================================
 
+const scores = [
+    {name: 'Max', score: 83, grade: null},
+    {name: 'David', score: 77, grade: null},
+    {name: 'Khalid', score: 92, grade: null},
+    {name: 'Rianne', score: 66, grade: null}
+]
 
+function scoreToLetter(score) {
+    if (score < 60) {
+        return 'F';
+    } else if (score < 70) {
+        return 'D';
+    } else if (score < 80) {
+        return 'C';
+    } else if (score < 90) {
+        return 'B';
+    } else {
+        return 'A';
+    }
+}
 
-
+for (let i = 0; i < scores.length; i++) {
+    const letterGrade = scoreToLetter(scores[i].score);
+    console.log(letterGrade);
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,9 +78,33 @@ const scores = [
 //  ];
 // ==========================================
 
+const scores = [
+    {name: 'Max', score: 83, grade: null},
+    {name: 'David', score: 77, grade: null},
+    {name: 'Khalid', score: 92, grade: null},
+    {name: 'Rianne', score: 66, grade: null}
+]
 
+function scoreToLetter(score) {
+    if (score < 60) {
+        return 'F';
+    } else if (score < 70) {
+        return 'D';
+    } else if (score < 80) {
+        return 'C';
+    } else if (score < 90) {
+        return 'B';
+    } else {
+        return 'A';
+    }
+}
 
+for (let i = 0; i < scores.length; i++) {
+    const letterGrade = scoreToLetter(scores[i].score);
+    scores[i].grade = letterGrade;
+}
 
+console.log(scores);
 
 // ==========================================
 // Opdracht 2
@@ -75,17 +128,25 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+const NOVIEmployees = [
+    {firstName: 'Nova', lastName: 'Eeken'},
+    {firstName: 'Sam', lastName: 'Barnhoorn'},
+    {firstName: 'Tessa', lastName: 'Steur'},
+    {firstName: 'Mark', lastName: 'Rensen'},
+]
 
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    const email = `${NOVIEmployees[i].firstName}.${NOVIEmployees[i].lastName}@novi.nl`.toLowerCase();
+    NOVIEmployees[i].email = email;
+}
 
-
-
+console.log(NOVIEmployees);
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
-
-
+// done
 
 // ==========================================
 // Opdracht 3
@@ -131,5 +192,35 @@ const students = [
 // ]
 // ==========================================
 
+const neighborhoodMap = {
+    '3513': 'Pijlsweerd',
+    '3514': 'Vogelenbuurt',
+    '3512': 'Binnenstad',
+    '3531': 'Lombok',
+    '3572': 'Wittevrouwen',
+    '3581': 'Oudwijk',
+    '3583': 'Schildersbuurt'
+};
+
+const students = [
+    {name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null},
+    {name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: null},
+    {name: 'Dennis', city: 'Utrecht', zipCode: '3572', neighborhood: null},
+    {name: 'Robin', city: 'Utrecht', zipCode: '3581', neighborhood: null},
+    {name: 'Tanush', city: 'Utrecht', zipCode: '3512', neighborhood: null},
+    {name: 'Florien', city: 'Utrecht', zipCode: '3513', neighborhood: null},
+    {name: 'Larissa', city: 'Utrecht', zipCode: '3583', neighborhood: null},
+    {name: 'Marijn', city: 'Utrecht', zipCode: '3572', neighborhood: null},
+    {name: 'Jan', city: 'Utrecht', zipCode: '3531', neighborhood: null},
+    {name: 'Laura', city: 'Utrecht', zipCode: '3531', neighborhood: null},
+    {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
+    {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
+]
+
+for (let i = 0; i < students.length; i++) {
+    students[i].neighborhood = neighborhoodMap[students[i].zipCode];
+}
+
+console.log(students);
 
 

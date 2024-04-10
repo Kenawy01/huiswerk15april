@@ -12,9 +12,13 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
+const names = ["Henk", "Piet", "Fred", "Joop"];
 
+for (let i = 0; i < names.length; i++) {
+    names[i] += "je";
+}
 
-
+console.log(names);
 
 // ==========================================
 // Opdracht 2
@@ -30,9 +34,21 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
+const numbers = [2, 4, 5, 29, 38];
 
+function multiplyEvenOdd(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            array[i] *= 2;
+        } else {
+            array[i] *= 3;
+        }
+    }
+}
 
+multiplyEvenOdd(numbers);
 
+console.log(numbers); // [ 4, 8, 15, 87, 76 ]
 
 // ==========================================
 // Opdracht 3
@@ -56,6 +72,16 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 24 is 13824',
 //   'Het volume van 11 is 1331'
 // ]
+
+const squares = [30, 2, 8, 24, 11];
+
+for (let i = 0; i < squares.length; i++) {
+    const volume = squares[i] ** 3;
+    squares[i] = `Het volume van ${squares[i]} is ${volume}`;
+}
+
+console.log(squares);
+
 
 
 
